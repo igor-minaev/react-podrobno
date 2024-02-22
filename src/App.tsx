@@ -10,11 +10,15 @@ function hello() {
 function App() {
     return (
         <div className="App">
-            This is APP component
+            <AppTitle/>
             <Rating/>
             <Accordion/>
         </div>
     );
+}
+
+function AppTitle(){
+    return <>This is APP component</>
 }
 
 const Rating = () => {
