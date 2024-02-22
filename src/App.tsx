@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Accordion} from './components/Accordion/Accordion';
+import {Rating} from './components/Rating/Rating';
 
 function hello() {
     alert('Hello')
@@ -12,35 +13,26 @@ function App() {
     console.log('App rendering')
     return (
         <div className="App">
-            <AppTitle/>
-            <Rating/>
-            <Accordion/>
-            <Rating/>
+            <PageTitle title={'This is APP component'}/>
+            ---Article 1---
+            <Rating value={0}/>
+            <Rating value={1}/>
+            <Rating value={2}/>
+            <Rating value={3}/>
+            <Rating value={4}/>
+            <Rating value={5}/>
+            <Rating value={6}/>
+            <Accordion title={'Menu'}/>
+            <Accordion title={'Users'}/>
+            ---Article 2---
+            <Rating value={4}/>
         </div>
     );
 }
 
-function AppTitle() {
+function PageTitle(props:any) {
     console.log('AppTitle rendering')
-    return <>This is APP component</>
-}
-
-const Rating = () => {
-    console.log('Rating rendering')
-    return (
-        <div>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-        </div>
-    )
-}
-
-function Star() {
-    console.log('Star rendering')
-    return <div>star</div>
+    return <h1>{props.title}</h1>
 }
 
 
