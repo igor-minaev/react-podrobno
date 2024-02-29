@@ -1,17 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 type OnOffPropsType = {
-    on: boolean
+    // on: boolean
 }
 
 export const OnOff = (props: OnOffPropsType) => {
+    let[on,setOn] = useState(false)
     const onStyle = {
         width: '30px',
         height: '20px',
         border: '1px solid black',
         display: 'inline-block',
         marginRight: '5px',
-        backgroundColor: props.on ? 'green' : 'white'
+        // backgroundColor: props.on ? 'green' : 'white'
+        backgroundColor: on ? 'green' : 'white'
 
     }
     const offStyle = {
@@ -20,6 +22,7 @@ export const OnOff = (props: OnOffPropsType) => {
         border: '1px solid black',
         display: 'inline-block',
         marginRight: '5px',
+        // backgroundColor: props.on ? 'white' : 'red'
         backgroundColor: props.on ? 'white' : 'red'
     }
     const indicatorStyle = {
