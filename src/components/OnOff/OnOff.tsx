@@ -2,10 +2,10 @@ import React, {useState} from 'react';
 
 type OnOffPropsType = {
     on: boolean
+    setOn: (on: boolean) => void
 }
 
 export const OnOff = (props: OnOffPropsType) => {
-    let [on, setOn] = useState(false)
     const onStyle = {
         width: '30px',
         height: '20px',
@@ -32,8 +32,8 @@ export const OnOff = (props: OnOffPropsType) => {
     }
     return (
         <div style={{marginBottom: '10px'}}>
-            <div style={onStyle}>On</div>
-            <div style={offStyle}>Off</div>
+            <div onClick={()=>props.setOn(true)} style={onStyle}>On</div>
+            <div onClick={()=>props.setOn(false)} style={offStyle}>Off</div>
             <div style={indicatorStyle}></div>
         </div>
     );
