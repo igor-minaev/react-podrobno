@@ -31,7 +31,7 @@ function App() {
             <UncontrolledOnOff onChange={setOn}/> {on.toString()}
             <UncontrolledAccordion titleValue={'Users'}/>
             <UncontrolledAccordion titleValue={'Menu'}/>
-            <UncontrolledRating/>
+            {/*<UncontrolledRating/>*/}
         </div>
     );
 }
