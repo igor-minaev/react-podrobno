@@ -25,4 +25,7 @@ export const GetValueOfUncontrolledInputByButtonPres = () => {
         - actual value: {value}</>
 }
 
+export const ControlledInput = () => <input/>
+export const ControlledCheckbox = () => <input/>
+
 export const ControlledInputWithFixedValue = () => <input value="it-incubator"/>
