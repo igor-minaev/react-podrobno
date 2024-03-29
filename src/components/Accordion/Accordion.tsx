@@ -4,6 +4,7 @@ type AccordionPropsType = {
     titleValue: string
     collapsed: boolean
     onChange: () => void
+    items: string[]
 }
 
 export const Accordion = (props: AccordionPropsType) => {
@@ -23,7 +24,7 @@ type AccordionTitlePropsType = {
 
 function AccordionTitle(props: AccordionTitlePropsType) {
     console.log('AccordionTitle rendering')
-    return <h1 onClick={(e)=>props.onChange()}>{props.title}</h1>
+    return <h1 onClick={(e) => props.onChange()}>{props.title}</h1>
 }
 
 
